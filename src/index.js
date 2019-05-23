@@ -28,7 +28,10 @@ class Clock extends React.Component {
         this.state = {time: new Date().toLocaleTimeString()}
     }
     componentDidMount() {
-        setInterval(() => this.tick(), 1000);
+        this.clearMemory = setInterval(() => this.tick(), 1000);
+    };
+    componentWillMount() {
+        clearInterval(this.clearMemory);
     };
 
     tick(){
