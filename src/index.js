@@ -10,6 +10,7 @@ function MixAllElements() {
         <Fluff quallity="Big" />
         <Fluff quallity="Awesome" />
         <Fluff quallity="Fluffy" />
+        <Clock />
     </div>
     )
 };
@@ -19,6 +20,29 @@ function Fluff(props) {
         <h1>Fluffers is {props.quallity}</h1>
     )
 };
+
+// State and LifeCycles
+class Clock extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {time: new Date().toLocaleTimeString()}
+    }
+    componentDidMount() {
+        setInterval(() => this.tick(), 1000);
+    };
+
+    tick(){
+        this.setState({
+            time: new Date().toLocaleTimeString()
+        });
+    };
+
+    render() {
+        return (
+        <h2>It is {this.state.time}</h2>
+        )
+    };     
+}
 
 ReactDOM.render(<MixAllElements />, document.getElementById('root'));
 
