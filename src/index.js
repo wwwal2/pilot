@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import ConditionalRendering from './ConditionalRendering'
 
 function MixAllElements() {
     return (
@@ -14,6 +15,7 @@ function MixAllElements() {
             <a href="www.google.com" onClick={click}>
                 Link prevent default
             </a>
+            <ConditionalRendering />
         </div>
     )
 };
