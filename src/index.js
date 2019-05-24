@@ -6,12 +6,15 @@ import * as serviceWorker from './serviceWorker';
 
 function MixAllElements() {
     return (
-    <div>
-        <Fluff quallity="Big" />
-        <Fluff quallity="Awesome" />
-        <Fluff quallity="Fluffy" />
-        <Clock />
-    </div>
+        <div>
+            <Fluff quallity="Big" />
+            <Fluff quallity="Awesome" />
+            <Fluff quallity="Fluffy" />
+            <Clock />
+            <a href="www.google.com" onClick={click}>
+                Link prevent default
+            </a>
+        </div>
     )
 };
 
@@ -25,7 +28,7 @@ function Fluff(props) {
 class Clock extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {time: new Date().toLocaleTimeString()}
+        this.state = { time: new Date().toLocaleTimeString() }
     }
     componentDidMount() {
         this.clearMemory = setInterval(() => this.tick(), 1000);
@@ -34,7 +37,7 @@ class Clock extends React.Component {
         clearInterval(this.clearMemory);
     };
 
-    tick(){
+    tick() {
         this.setState({
             time: new Date().toLocaleTimeString()
         });
@@ -46,6 +49,12 @@ class Clock extends React.Component {
         )
     };     
 }
+
+//  Events
+function click(event) {
+    event.preventDefault();
+    return console.log('Click');
+};
 
 ReactDOM.render(<MixAllElements />, document.getElementById('root'));
 
