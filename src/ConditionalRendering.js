@@ -14,12 +14,12 @@ class ConditionalRendering extends React.Component {
     };
 
     render() {
-        const btnOne = <button onClick={this.posOne}> Position one</button>;
-        const btnTwo = <button onClick={this.posTwo}>Position two</button>
+        const btnOne = <button onClick={this.posOne}>position one</button>;
+        const btnTwo = <button onClick={this.posTwo}>position two</button>
 
         return (
             <div>
-                <h2>the button is</h2>
+                <h2>the button is in</h2>
                 {this.state.firstPosition ? btnOne : btnTwo}
             </div>
         )

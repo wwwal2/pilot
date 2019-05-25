@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import ConditionalRendering from './ConditionalRendering'
+import ConditionalRendering from './ConditionalRendering';
+import Forms from './Forms';
+
 
 function MixAllElements() {
     return (
@@ -16,6 +18,7 @@ function MixAllElements() {
                 Link prevent default
             </a>
             <ConditionalRendering />
+            <Forms />
         </div>
     )
 };
