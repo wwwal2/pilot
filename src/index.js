@@ -5,7 +5,8 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import ConditionalRendering from './ConditionalRendering';
 import Forms from './Forms';
-import LiftedState from './LiftedState'
+import LiftedState from './LiftedState';
+import ParentElement from './DoubleCheckTwoSideConnection';
 
 
 function MixAllElements() {
@@ -21,6 +22,7 @@ function MixAllElements() {
             <ConditionalRendering />
             <Forms />
             <LiftedState />
+            <ParentElement />
         </div>
     )
 };

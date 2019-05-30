@@ -29,8 +29,8 @@ class LiftedState extends React.Component {
         const celsiusNum = this.state.variant === 'f' ? toCelsius(this.state.temperature) : this.state.temperature;
         return (
             <div>
-                <Operation variant="c" temperature={celsiusNum} onChangeTemp={this.celsiusChange} />
-                <Operation variant="f" temperature={farenheitNum} onChangeTemp={this.farenheitChange} />
+                <Operation variant="c" temperature={celsiusNum} onDoublesideConnection={this.celsiusChange} />
+                <Operation variant="f" temperature={farenheitNum} onDoublesideConnection={this.farenheitChange} />
                 <Verdict result={celsiusNum} />
             </div>
         )
@@ -43,7 +43,7 @@ class Operation extends React.Component {
     }
     
     inputTemp = (e) => {
-        this.props.onChangeTemp(e.target.value)
+        this.props.onDoublesideConnection(e.target.value)
     }
 
     render() {
