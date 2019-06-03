@@ -38,10 +38,6 @@ class LiftedState extends React.Component {
 };
 
 class Operation extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    
     inputTemp = (e) => {
         this.props.onDoublesideConnection(e.target.value)
     }

@@ -3,7 +3,7 @@ import React from 'react';
 class ParentElement extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {message: "Say \'ONE\'"}
+        this.state = {message: "Say 'ONE'"}
     }
 
     doubleConnectionFunction = (e) => {
@@ -21,7 +21,7 @@ class ParentElement extends React.Component {
 
 class ChildElement extends React.Component {
     rewriteMessage = () => {
-        if (this.props.message === "Say \'ONE\'") this.props.connection("Say \'TWO\'")
+        if (this.props.message === "Say 'ONE'") this.props.connection("Say 'TWO'")
     }
 
     render() {
